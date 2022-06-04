@@ -1,0 +1,185 @@
+* {
+  margin: 0%;
+  padding: 0%;
+}
+
+body {
+  height: 100vh;
+}
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "header"
+    "filtro"
+    "main"
+    "footer";
+  /*height: 100vh; JG:Se elimina este heig que hace que no se ajuste tambien en escritorio*/
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: 5%;
+  background: #b5baf7;
+  color: #1a5cc0;
+  grid-area: header;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background: #e4bfe9;
+  grid-area: filtro;
+}
+
+.main {
+  grid-area: main;
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background: white;
+}
+
+.card img {
+  padding-top: 5%;
+  width: 80%;
+}
+
+h5 {
+  font-weight: lighter;
+}
+
+.flex-button p {
+  margin: 1%;
+  padding: 1%;
+  border: 1px solid black;
+  background: #e4bfe9;
+  grid-area: button;
+}
+
+.flex-button {
+  display: flex;
+  justify-content: center;
+}
+
+button {
+  margin-top: 4%;
+  background-color: #b5baf7;
+  width: 5rem;
+  border: 1px solid black;
+}
+
+footer {
+  background: #8e96e0;
+  color: #240cad;
+  grid-area: footer;
+  text-align: center;
+}
+
+.no-movil {
+  display: none;
+}
+
+@media (min-width: 577px) {
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 7fr;
+    grid-template-rows: 1fr 7fr 1fr;
+    grid-template-areas:
+      "header filtro"
+      "header main"
+      "footer main";
+  }
+
+  .no-movil {
+    display: flex;
+  }
+
+  .contenedor_cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5%;
+  }
+
+  header {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  section {
+    padding: 2%;
+  }
+
+  .list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style: none;
+  }
+
+  .list li {
+    list-style: none;
+  }
+
+  select {
+    width: 90%;
+    text-align: center;
+    padding: 0.2%;
+  }
+
+  .card {
+    width: 20%;
+    height: 80%;
+    background: white;
+  }
+
+  .card h4,
+  div {
+    display: flex;
+    align-items: flex-end;
+  }
+
+  .card img {
+    width: 70%;
+  }
+
+  .pag {
+    height: 7em;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+  }
+
+  footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20%;
+  }
+
+  header .fa-bars {
+    visibility: hidden;
+  }
+
+  .list li {
+    padding-bottom: 30%;
+  }
+
+  header p {
+    font-size: 20px;
+  }
+
+
+}
